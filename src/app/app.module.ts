@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChannelComponent } from './components/channel/channel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChannelComponent
   ],
   imports: [
     BrowserModule,
@@ -15,4 +17,9 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+
+export class AppModule { 
+  
+}
