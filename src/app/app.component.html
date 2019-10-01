@@ -1,1 +1,17 @@
- <app-channel></app-channel>
+<div class="container-fluid" id="header">
+    <div class="row bg-light">
+        <header class="col-sm-12">
+            <h1 class="text-center">StartTalk {{idMessageEvent}} surum</h1>
+        </header>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <app-channel [channels]='channels'></app-channel>
+        </div>
+        <div class="col-sm-9">
+            <app-chat (idMessageEvent)='showMessages($event)'></app-chat>
+        </div>
+    </div>
+    {{idMessageEvent}}
+</div>

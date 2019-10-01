@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Channel } from './models/channel';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'StartTalk-Front-end';
+
+  channels : Channel[] = [];
+  idMessageEvent : String = 'a';
+
+  showMessages(id){
+    this.idMessageEvent = id;
+  }
+  
 }
