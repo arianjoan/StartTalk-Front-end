@@ -4,7 +4,7 @@
       <h3>Canales</h3>
         <ul class="list-group" >
           <li class="list-group-item" *ngFor='let ch of (channels | async) '>
-            <button (click)='entryChannel(ch.id)'>{{ch.name}}</button>
+            <button (click)='setCurrentChannel(ch.id)'>{{ch.name}}</button>
           </li>
         </ul>
         <br>

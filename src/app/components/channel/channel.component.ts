@@ -17,5 +17,9 @@ export class ChannelComponent implements OnInit {
   ngOnInit(){
     this.channels =  this.serviceChannel.loadChannels();
   }
+
+  setCurrentChannel(id){
+    this.serviceChannel.setCurrentChannel(id);
+  }
  
 }
