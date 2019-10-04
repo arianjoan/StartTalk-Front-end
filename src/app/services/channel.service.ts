@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Channel } from '../models/channel';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ChannelService {
   private getChannels(): Promise<Channel[]> {
     return new Promise((resolve, eject) => {
       var request = new XMLHttpRequest();
-      request.open('GET', 'http://localhost:8080/channels');
+      request.open('GET',environment.backend + 'channels');
       request.responseType = 'json';
       request.onload = () => {
         return resolve(this.mapChannels(request.response));
