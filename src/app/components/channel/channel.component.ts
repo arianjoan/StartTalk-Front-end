@@ -11,12 +11,11 @@ import { ChannelService } from 'src/app/services/channel.service';
 export class ChannelComponent implements OnInit {
 
   channels : Promise<Channel[]>;
- // channels : Channel[];
-
+ 
   constructor(private serviceChannel : ChannelService) { }
 
   ngOnInit(){
-    this.channels =  this.serviceChannel.loadChannels();
+    this.channels =  this.serviceChannel.getChannels();
   }
 
   setCurrentChannel(id){

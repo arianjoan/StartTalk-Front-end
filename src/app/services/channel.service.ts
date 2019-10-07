@@ -16,17 +16,13 @@ export class ChannelService {
   private currentChannel$  = new Subject<String>();
   private currentChannel  : String = "CH35e0a2e365ed4875b0ac5712bd9d671f";
 
-  private getChannels(): Promise<Channel[]> {
+  public getChannels(): Promise<Channel[]> {
     return new Promise((resolve, reject) => {
       this.http.get(environment.backend + 'channels').toPromise()
       .then((response) => {
       return resolve(this.mapChannels(response));
       });
     })
-  }
-
-  loadChannels(): Promise<Channel[]>{
-    return this.getChannels();
   }
 
   private mapChannels(channels): Channel[] {
